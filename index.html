@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive cosmology</title>
+<meta name="description" content="Interactive figures for a university course in cosmology, running entirely in the browser.">
+<style>
+:root { --ink: #1c2433; --blue: #1f3b73; --muted: #5f6f8a; --line: #dde4f0; --card: #fff; --bg: #f6f8fc; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.5 "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; }
+main { max-width: 1120px; margin: 0 auto; padding: 40px 16px 28px; }
+h1 { font-weight: normal; color: var(--blue); font-size: 40px; line-height: 1.15; margin: 0 0 8px; }
+.lead { font-size: 19px; max-width: 46em; margin: 0 0 6px; }
+.small { font-size: 15px; color: var(--muted); max-width: 52em; margin: 0; }
+.banner { background: #fff6e5; border-left: 3px solid #d9a441; padding: 8px 14px; margin: 0 0 22px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin: 30px 0; }
+.card { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--line);
+  border-radius: 6px; overflow: hidden; color: inherit; text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s; }
+.card:hover, .card:focus-visible { box-shadow: 0 6px 18px rgba(31, 59, 115, 0.14); transform: translateY(-2px); }
+.card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left;
+  border-bottom: 1px solid var(--line); background: #eef2f8; }
+.card .body { padding: 14px 18px 16px; }
+.card h2 { font-weight: normal; color: var(--blue); font-size: 22px; line-height: 1.25; margin: 0 0 6px; }
+.card p { margin: 0; font-size: 16px; }
+.card .note { margin-top: 8px; font-size: 14px; color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding-top: 14px; font-size: 15px; color: var(--muted); }
+footer a, .banner a { color: var(--blue); }
+@media (max-width: 600px) { h1 { font-size: 31px; } main { padding-top: 26px; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Interactive cosmology</h1>
+<p class="lead">Interactive figures from the lecture course Cosmology (280416 VU), University of Vienna. Each one is a single web page that
+runs entirely in your browser: nothing to install, and no data leaves your computer.</p>
+<p class="small">Made for a laptop or a tablet in landscape. Every page also works offline: save it
+(“Save page as…”) and open the file.</p>
+<div class="grid">
+<a class="card" href="latest/universe.html"><div class="body"><h2>Build your own universe</h2><p>Pick Ω<sub>m</sub> and Ω<sub>Λ</sub> in the plane of Friedmann models and follow the expansion history a(t), the density parameters, the age, the geometry and the fate of the universe.</p></div></a>
+<a class="card" href="latest/lightcone.html"><div class="body"><h2>Light cones in an expanding Universe</h2><p>Spacetime diagrams in physical distance, comoving distance and conformal time. Place an event and follow the photon it sends towards us: past light cone, horizons and cosmological redshift.</p></div></a>
+<a class="card" href="latest/distances.html"><div class="body"><h2>The distance zoo</h2><p>Comoving, transverse, angular-diameter, luminosity and light-travel distance against redshift, and how big and how bright the same galaxy appears as it is moved to higher redshift.</p></div></a>
+<a class="card" href="latest/bbn.html"><div class="body"><h2>Big Bang nucleosynthesis</h2><p>A live nuclear reaction network for the first minutes. Change the baryon-to-photon ratio, N<sub>eff</sub> and the neutron lifetime and compare the light-element abundances with the observations.</p></div></a>
+<a class="card" href="latest/cmb.html"><div class="body"><h2>The CMB sky and its power spectrum</h2><p>Seven cosmological parameters, the TT, TE and EE spectra from a neural-network emulator of CLASS compared with Planck, and a full-sky map that morphs as the parameters change.</p></div></a>
+<a class="card" href="latest/nbody.html"><div class="body"><h2>Simulating the cosmic web</h2><p>A particle-mesh N-body simulation (FastPM) running in the browser: the cosmic web forms from Gaussian initial conditions. Zel'dovich approximation, power spectrum, light cone and redshift space.</p><p class="note">Uses the GPU (WebGPU) where the browser supports it, otherwise the CPU.</p></div></a>
+</div>
+<footer>© 2026 Oliver Hahn, University of Vienna. Code: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0-or-later</a>;
+text: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</footer>
+</main>
+</body>
+</html>
