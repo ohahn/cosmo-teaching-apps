@@ -11,6 +11,8 @@
 body { margin: 0; background: var(--bg); color: var(--ink);
   font: 17px/1.5 "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif; }
 main { max-width: 1120px; margin: 0 auto; padding: 40px 16px 28px; }
+.logo { display: inline-block; margin: -5px 0 18px -5px; }
+.logo img { display: block; height: 58px; width: auto; }
 h1 { font-weight: normal; color: var(--blue); font-size: 40px; line-height: 1.15; margin: 0 0 8px; }
 .lead { font-size: 19px; max-width: 46em; margin: 0 0 6px; }
 .small { font-size: 15px; color: var(--muted); max-width: 52em; margin: 0; }
@@ -27,15 +29,16 @@ h1 { font-weight: normal; color: var(--blue); font-size: 40px; line-height: 1.15
 .card p { margin: 0; font-size: 16px; }
 .card .note { margin-top: 8px; font-size: 14px; color: var(--muted); }
 footer { border-top: 1px solid var(--line); padding-top: 14px; font-size: 15px; color: var(--muted); }
-footer a, .banner a { color: var(--blue); }
-@media (max-width: 600px) { h1 { font-size: 31px; } main { padding-top: 26px; } }
+footer a, .banner a, .lead a { color: var(--blue); }
+@media (max-width: 600px) { h1 { font-size: 31px; } .logo img { height: 46px; } main { padding-top: 26px; } }
 </style>
 </head>
 <body>
 <main>
+<a class="logo" href="https://www.univie.ac.at/en/"><img src="univie_logo.svg" alt="University of Vienna" width="187" height="58"></a>
 
 <h1>Interactive cosmology</h1>
-<p class="lead">Interactive figures from the lecture course Cosmology (280416 VU), University of Vienna. Each one is a single web page that
+<p class="lead">Interactive figures from the lecture course Cosmology (280416 VU), by <a href="https://ufind.univie.ac.at/en/person.html?id=113277">Oliver Hahn</a>, University of Vienna. Each one is a single web page that
 runs entirely in your browser: nothing to install, and no data leaves your computer.</p>
 <p class="small">Made for a laptop or a tablet in landscape. Every page also works offline: save it
 (“Save page as…”) and open the file.</p>
